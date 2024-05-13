@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import express, { request } from 'express';
 import cors from 'cors';
 import { ping } from './controller/system.js';
+import { getAllUsers } from './lib/userInfo.js';
 
 const serverPort = 3000;
 const app = express();
@@ -12,6 +13,7 @@ app.use(cors());
 const router = express.Router();
 
 router.route('/ping').get(ping);
+router.route('/all-users').get(getAllUsers);
 
 app.use('/socialLoginProject/api/v1', router);
 app.listen(serverPort);

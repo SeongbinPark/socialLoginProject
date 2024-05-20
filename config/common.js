@@ -1,4 +1,3 @@
-// response time log
 'use strict';
 import moment from 'moment-timezone';
 
@@ -13,7 +12,7 @@ function consoleBar() {
 }
 
 function timeLog(log) {
-  const time_current = moment().tz('Asia/Seoul').format('YYYY-MM-DD H:mm:ss');            // 콘솔에 시간
+  const time_current = moment().tz('Asia/Seoul').format('YYYY-MM-DD H:mm:ss');            // KST
   console.log('[KST: ' + time_current + '] ' + log);
 }
 
